@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{{request.user}}
+<form method ="POST">{% csrf_token %}
+{% for i in form %}
+<center>{{ i.label }} </br> {{ i }}</center>
+{% endfor %}
+<input type="submit" name="setv" value="Enter" >
+</form>
+</body>
+</html>
